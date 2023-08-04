@@ -4,12 +4,12 @@ import asyncio
 import aiohttp
 
 
-""" переводчик субтитров """
+""" переводчик субтитров by glit-hh-ch """
 
 path_to_all_subtitles = r'путь к папке со всеми субтитрами'
 save_where_take = 0  # сохранить переведенные субтитры там же где и получены: 0 - да, 1 - нет
-source_language = "en"
-target_language = "ru"
+source_language = "en"  # текущий язык субтитров
+target_language = "ru"  # язык на который надо перевести
 
 path_to_files = []
 
