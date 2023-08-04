@@ -11,11 +11,11 @@ from pathlib import Path
 parser = argparse.ArgumentParser(prog='Ключи:',
                                  formatter_class=argparse.RawDescriptionHelpFormatter,
                                  epilog='Пример использования для одного токена:\n'
-                                        '-t NTY1Ocs5NTctNDQzDg3tTA0.GF45lL.IzqsUS7ti5uAGic7K9nnF98ibBlPlLgBptgvo\n'
-                                        'Для токенов в файле:\n'
-                                        '-t C:\\data\\ds_token\\tokens.txt\n'
-                                        'Добавьте этот ключ если хотите изменить место вывода\n'
-                                        '-o C:\\data\\ds_token\\result.json',
+                                        'check-ds-token.py -t NTY1Ocs5NTctNDQzDg3tTA0.GF45lL.IzqsUS7ti5uAGic7K9nnF98ibBlPlLgBptgvo\n'
+                                        'Для файла с токенами(каждый токен должен начинаться с новой строки и без лишних знаков):\n'
+                                        'check-ds-token.py -t C:\\data\\ds_token\\tokens.txt\n'
+                                        'Добавьте ключ -o если хотите изменить место вывода\n'
+                                        'check-ds-token.py -t TOKEN -o C:\\data\\ds_token\\result.json',
                                  description='Написал glit-hh-ch')
 
 parser.add_argument('-t', '--token', help='Токен дискорда или путь к списку токенов дискорда', required=True)
