@@ -4,7 +4,7 @@
 - --
 - check-ds-token.py - чекер дискорд токенов
   > **Использование**
-  > - перед первым запуском пропишите: pip install aiohttp pathlib argparse asyncio json
+  > - перед первым запуском пропишите: pip install aiohttp pathlib argparse asyncio json requests
   > - теперь пропишите check-ds-token.py -h и вы получите инструкцию по использованию
    
   > **краткое описание:**
