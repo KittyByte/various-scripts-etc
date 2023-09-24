@@ -14,11 +14,11 @@ parser = argparse.ArgumentParser(prog='Ключи:',
                                         'check-ds-token.py -t NTY1Ocs5NTctNDQzDg3tTA0.GF45lL.IzqsUS7ti5uAGic7K9nnF98ibBlPlLgBptgvo\n'
                                         'Для файла с токенами(каждый токен должен начинаться с новой строки и без лишних знаков):\n'
                                         'check-ds-token.py -t C:\\data\\ds_token\\tokens.txt\n'
-                                        'Добавьте ключ -o если хотите изменить место вывода\n'
-                                        'check-ds-token.py -t TOKEN -o C:\\data\\ds_token\\result.json',
+                                        'Добавьте этот ключ если хотите изменить место вывода\n'
+                                        '-o C:\\data\\ds_token\\result.json',
                                  description='Написал glit-hh-ch')
 
-parser.add_argument('-t', '--token', help='Токен дискорда или путь к списку токенов дискорда', required=True)
+parser.add_argument('-t', '--token', help='Токен дискорда или путь к списку токенов дискорда')
 parser.add_argument('-o', '--output', help='Путь вывода результатов')
 
 args = parser.parse_args()
@@ -27,10 +27,10 @@ current_path = Path(__file__).parent
 path_output = f'{current_path}\\DiscordToken_data.json'
 result = []
 
+# ------------- check arguments -------------------------
 if args.token is None:
     print('[!] Используйте <python check-ds-token.py -h> для получения информации')
     exit()
-
 
 check_path = Path(args.token).parent
 if os.path.exists(check_path) and str(check_path) != '.':
@@ -43,7 +43,6 @@ if os.path.exists(check_path) and str(check_path) != '.':
 else:
     lst_tokens = [args.token]
 
-
 if args.output:
     try:
         with open(args.output + '.json', 'w') as f:
@@ -52,6 +51,7 @@ if args.output:
     except:
         print('[!] Проверьте путь значения -o ключа')
         exit()
+# ------------- end check arguments ----------------------
 
 
 badgeList = [
@@ -156,17 +156,7 @@ async def GetUHQFriends(token, session):
         return False
 
 
-def getip():
-    ip = 'None'
-    try:
-        ip = requests.get("https://api.ipify.org").text
-    except:
-        pass
-    return ip
-
-
 def globalInfo():
-    ip = getip()
     username = os.getlogin()
     ipdata = requests.get(f'https://ipinfo.io/{ip}').json()
     contry = ipdata["country"]
