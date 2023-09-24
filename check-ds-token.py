@@ -1,6 +1,5 @@
 import json
 import os
-import requests
 import argparse
 
 import aiohttp
@@ -213,7 +212,7 @@ async def get_ds_datas():
         await asyncio.gather(*tasks)
 
     write_data(result)
-    print(fr'[+] Файл сихранен по пути - {path_output}')
+    print(fr'[+] Файл сохранен по пути - {path_output}')
 
 
 if __name__ == '__main__':
