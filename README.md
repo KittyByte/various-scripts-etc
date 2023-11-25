@@ -16,6 +16,8 @@
    [
       {
           "Token": "NTY1OTc5NTczNgQzODg3MTA0.GF45lL.IzqsUShti5uAGic7K9nzFj8iIbBlPlLgBptgvo",
+          "Username": "Alma",
+          "Hashtag": "alma_palm",
           "avater url": "https://cdn.discordapp.com/attachments/963114349877162004/992593184251183195/7c8f476123d28d103efe381543274c25.png",
           "Email": "`lolo2345lolo@gmail.com`",
           "Phone number": "+16102458472",
