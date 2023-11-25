@@ -176,6 +176,8 @@ async def get_info_from_token(token, session):
 
     data = {
         "Token": f"{token}",
+        "Username": f"{username}",
+        "Hashtag": f"{hashtag}",
         "avater url": f"{pfp}",
         "Email": f"`{email}`",
         "Phone number": f"{phone}",
