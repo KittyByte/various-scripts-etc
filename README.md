@@ -2,6 +2,15 @@
 
 - async_translate_subtitles.py - используйте для быстрого перевода субтитров (настройки внутри файла)
 - --
+
+- video_ffmpeg_compressor.bat - простой скрипт для сжатся всех видео в папке (настройки внутри файла)
+  > **Использование**
+  > - Скачать ffmpeg.exe (ссылка: https://www.gyan.dev/ffmpeg/builds/ файл называется ffmpeg-git-full.7z прямая ссылка: [тык](https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z))
+  > - Откройте архив и вытащите ffmpeg.exe из папки bin
+  > - После перенесите скрипт и ffmpeg.exe в туже папку что и все видео которые вы хотите сжать и запустите скрипт
+  > - После запуска программы будет создана папка, в которой будут храниться все ваши сжимаемые видео.
+
+- --
 - check-ds-token.py - чекер дискорд токенов
   > **Использование**
   > - перед первым запуском пропишите: pip install aiohttp pathlib argparse asyncio json requests
